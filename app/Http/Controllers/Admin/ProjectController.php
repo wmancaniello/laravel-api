@@ -22,9 +22,10 @@ class ProjectController extends Controller
     public function index()
     {
         $listProject = Project::all();
+        return view('admin.projects.index', compact('listProject'));
+         
         return response()->json($listProject);
 
-        return view('admin.projects.index', compact('listProject'));
     }
 
     /**
