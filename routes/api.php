@@ -24,5 +24,8 @@ Route::get('/callforapi', function () {
 });
 
 
-
+// Index
 Route::get('/projects', [ProjectController::class, 'index']);
+
+// Show
+Route::get('/projects/{slug}', [ProjectController::class, 'show']);
